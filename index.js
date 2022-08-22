@@ -22,3 +22,12 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
+//health check
+app.get('/health', (req, res) => {
+  res.send('ok')
+})
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`app running on port ${PORT}`)
+});
