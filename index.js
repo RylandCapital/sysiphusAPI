@@ -22,10 +22,15 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
-//health check
 app.get('/health', (req, res) => {
-  res.send('ok')
+  res.send('Healthy')
 })
+
+app.get('/health', (req, res) => {
+  res.send('Sysiphus API')
+})
+
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
