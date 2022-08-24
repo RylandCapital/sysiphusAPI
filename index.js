@@ -27,10 +27,8 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.send('Sysiphus API - Call Barry Anderson 407-701-4834 for a good time')
+  res.send('Sysiphus API ')
 })
-
-
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
