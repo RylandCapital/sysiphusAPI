@@ -1,13 +1,5 @@
 const router = require('express').Router();
-let standard = require('../models/standard');
-let dayjs = require('dayjs');
-
-var utc = require('dayjs/plugin/utc')
-var timezone = require('dayjs/plugin/timezone') // dependent on utc plugin
-
-dayjs.extend(utc)
-dayjs.extend(timezone)
-
+let standard = require('../../models/standard');
 
 
 
@@ -16,3 +8,9 @@ router.route('/rbos').get((req, res) => {
         .then(data => res.json(data))
         .catch(err => res.status(400).json('Error: ' + err));
 });
+
+
+
+
+
+module.exports = router;
